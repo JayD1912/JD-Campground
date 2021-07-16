@@ -52,8 +52,9 @@ app.use(express.urlencoded({
 }))
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+            console.log('Serving on port ', port)
 })
 
 const secret=process.env.SECRET || 'itsasecret'
