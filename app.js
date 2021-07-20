@@ -57,7 +57,7 @@ app.listen(port, () => {
             console.log('Serving on port ', port)
 })
 
-const secret=process.env.SECRET || 'itsasecret'
+const secret = 'itsasecret'
 const store=new MongoDBStore({
     url:dbUrl,
     secret,
